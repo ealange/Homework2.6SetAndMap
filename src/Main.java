@@ -24,9 +24,9 @@ public class Main {
         System.out.println("Нечетные числа из последовательности, без повторов: " +evenNums);
         String text = "На дворе — трава, на траве — дрова. Не руби дрова на траве двора! Что-нибудь да как-то";
         System.out.println(text);
-        String textWithoutPunct = text.replaceAll("\\p{Punct}^\"-""", "");
+        String textWithoutPunct = text.replaceAll("[,.:;!?—]", "");
         System.out.println(textWithoutPunct);
-        List<String> wordsFromText = List.of(text.split("\\s"));
+        List<String> wordsFromText = List.of(textWithoutPunct.split("\\s"));
         System.out.println(wordsFromText);
 
     }
